@@ -1,0 +1,40 @@
+version: '3.9'
+services:
+    dbOracle:
+        # hostname: localhost
+        # port: 49161
+        # sid: xe
+        # username: system
+        # password: oracle
+        #
+        # sqlplus system/oracle@localhost:1521/xe
+        #
+        image: epiclabs/docker-oracle-xe-11g
+        ports:
+            - 1521:1521/tcp
+        environment:
+              ORACLE_ALLOW_REMOTE: "true"
+              NLS_LANG: "American_America.UTF8"
+        volumes:
+            - ./oradata:/u01/app/oracle
+            - ./bd/:/docker-entrypoint-initdb.d/folder/
+            - ./00.check.sh:/docker-entrypoint-initdb.d/00.check.sh
+            - ./datafile/:/home/oracle/datafile/
+
+    # front:
+    #     image: registry.gitlab.com/sixbell/productos/gtw-portabilidad/gtd-gui/oraclient12-node14
+    #     deploy:
+    #         restart_policy:
+    #             condition: on-failure
+    #     ports:
+    #         - 9223:9223/tcp # nodemon debugger
+    #         - 8080:8080/tcp
+    #         - 8081:8081/tcp
+    #         - 8090:8090/tcp
+    #         - 8091:8091/tcp
+    #     working_dir: /usr/src/app
+    #     volumes:
+    #         - ./../../gtd-services:/usr/src/app
+    #         - ./config:/home/config
+    #         - ./log:/usr/app/log
+    #     command: "npm run-script debug"
