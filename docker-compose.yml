@@ -11,7 +11,7 @@ services:
         #
         image: epiclabs/docker-oracle-xe-11g
         ports:
-            - 1521:1521/tcp
+            - 8383:1521/tcp
         environment:
               ORACLE_ALLOW_REMOTE: "true"
               NLS_LANG: "American_America.UTF8"

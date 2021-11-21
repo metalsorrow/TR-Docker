@@ -11,9 +11,13 @@ conn turismo/turismo;
 show user;
 
 prompt executing 01-Script-01_create_tables.sql
---SET FEEDBACK OFF
 @01-Script-01_create_tables.sql
 
+prompt executing 02-Script-02_sequences
+@02-Script-02_sequences
+
+prompt executing 03-Script-03_plsql
+@03-Script-03_plsql
 
 --SET FEEDBACK ON
 prompt all scripts were executed. 
