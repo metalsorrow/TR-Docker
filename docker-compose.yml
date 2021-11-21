@@ -21,20 +21,20 @@ services:
             - ./00.check.sh:/docker-entrypoint-initdb.d/00.check.sh
             - ./datafile/:/home/oracle/datafile/
 
-    # front:
-    #     image: registry.gitlab.com/sixbell/productos/gtw-portabilidad/gtd-gui/oraclient12-node14
-    #     deploy:
-    #         restart_policy:
-    #             condition: on-failure
-    #     ports:
-    #         - 9223:9223/tcp # nodemon debugger
-    #         - 8080:8080/tcp
-    #         - 8081:8081/tcp
-    #         - 8090:8090/tcp
-    #         - 8091:8091/tcp
-    #     working_dir: /usr/src/app
-    #     volumes:
-    #         - ./../../gtd-services:/usr/src/app
-    #         - ./config:/home/config
-    #         - ./log:/usr/app/log
-    #     command: "npm run-script debug"
+    backend:
+        image: backend-test:latest
+        ports:
+            - 5000:5000
+        working_dir: /usr/src/app
+        volumes:
+            - ./../pythonFlaskPoo:/usr/src/app
+        command: "python3 /usr/src/app/app.py"
+
+    # sqlplus:
+    #     image:  guywithnose/sqlplus
+    #     command: "tail -f /dev/null"
+
+    # test:
+        # image:  backend-flask:latest
+        # command: "python3 /usr/src/app/app.py"
+        
