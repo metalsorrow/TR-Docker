@@ -39,7 +39,7 @@ CREATE TABLE departamento (
     cable                 CHAR(1) NOT NULL,
     calefaccion           CHAR(1) NOT NULL,
     amoblado              CHAR(1) NOT NULL,
-    foto_depto            BLOB,
+    foto_depto            VARCHAR2(255),
     precio_depto          NUMBER(10) NOT NULL,
     estado_depto          CHAR(1) NOT NULL,
     descripcion_depto     VARCHAR2(240) NOT NULL,
