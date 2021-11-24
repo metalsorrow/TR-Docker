@@ -1,34 +1,34 @@
 version: '3.9'
 services:
-    # dbOracle:
-    #     # hostname: localhost
-    #     # port: 49161
-    #     # sid: xe
-    #     # username: system
-    #     # password: oracle
-    #     #
-    #     # sqlplus system/oracle@localhost:1521/xe
-    #     #
-    #     image: epiclabs/docker-oracle-xe-11g
-    #     ports:
-    #         - 1521:1521/tcp
-    #     environment:
-    #           ORACLE_ALLOW_REMOTE: "true"
-    #           NLS_LANG: "American_America.UTF8"
-    #     volumes:
-    #         - ./oradata:/u01/app/oracle
-    #         - ./bd/:/docker-entrypoint-initdb.d/folder/
-    #         - ./00.check.sh:/docker-entrypoint-initdb.d/00.check.sh
-    #         - ./datafile/:/home/oracle/datafile/
+    dbOracle:
+        # hostname: localhost
+        # port: 49161
+        # sid: xe
+        # username: system
+        # password: oracle
+        #
+        # sqlplus system/oracle@localhost:1521/xe
+        #
+        image: epiclabs/docker-oracle-xe-11g
+        ports:
+            - 1521:1521/tcp
+        environment:
+              ORACLE_ALLOW_REMOTE: "true"
+              NLS_LANG: "American_America.UTF8"
+        volumes:
+            - ./oradata:/u01/app/oracle
+            - ./bd/:/docker-entrypoint-initdb.d/folder/
+            - ./00.check.sh:/docker-entrypoint-initdb.d/00.check.sh
+            - ./datafile/:/home/oracle/datafile/
 
-    # backend:
-    #     image: backend-test:latest
-    #     ports:
-    #         - 5000:5000
-    #     working_dir: /usr/src/app
-    #     volumes:
-    #         - ./../pythonFlaskPoo:/usr/src/app
-    #     command: "python3 /usr/src/app/app.py"
+    backend:
+        image: backend-test:latest
+        ports:
+            - 4000:4000
+        working_dir: /usr/src/app
+        volumes:
+            - ./../pythonFlaskPoo:/usr/src/app
+        command: "python3 /usr/src/app/app.py"
 
     frontend:
         image: node:16-alpine3.12
