@@ -30,14 +30,14 @@ services:
             - ./../pythonFlaskPoo:/usr/src/app
         command: "python3 /usr/src/app/app.py"
 
-    frontend:
-        image: node:16-alpine3.12
-        ports:
-          - 4200:4200/tcp
-        working_dir: /usr/src/app
-        volumes:
-          - ./../TR-Frontend:/usr/src/app
-        command: "npm start"
+    # frontend:
+    #     image: node:16-alpine3.12
+    #     ports:
+    #       - 4200:4200/tcp
+    #     working_dir: /usr/src/appttp://172.19.0.2
+    #     volumes:
+    #       - ./../TR-Frontend:/usr/src/app
+    #     command: "npm start"
 
     # sqlplus:
     #     image:  guywithnose/sqlplus
