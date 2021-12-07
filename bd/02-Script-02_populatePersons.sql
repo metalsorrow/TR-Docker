@@ -5,6 +5,8 @@ insert into TIPO_USUARIO(ID_TIPO, NOMBRE_TIPO)
 VALUES(2, 'worker');
 insert into TIPO_USUARIO(ID_TIPO, NOMBRE_TIPO)
 VALUES(3, 'admin');
+insert into TIPO_USUARIO(ID_TIPO, NOMBRE_TIPO)
+VALUES(4, 'trasportist');
 
 -- Usuario
 CREATE GLOBAL TEMPORARY TABLE namesAux
@@ -43,3 +45,4 @@ cross join namesAux t3
 where 1=1;
 COMMIT;
 
+-- Usuario
