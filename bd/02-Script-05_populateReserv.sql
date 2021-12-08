@@ -83,17 +83,21 @@ ON COMMIT DELETE ROWS;
 INSERT INTO AuxReserv(checkIN,dayof,ESTADO_RESERV,apartment_id,ID_USU,ID_work)
 
 with sub as (
-    select ID_USU
+    select ID_USU as ID_work,
+    row_number() over (order by 1) as seqnum
     from USUARIO
     where TIPO_USUARIO_ID_TIPO = 2
-    limit 100
 )
-select TO_DATE(TRUNC(DBMS_RANDOM.VALUE (2459215 , 2459580)),'J') as checkIN
-    ,trunc(dbms_random.value(1, 14)) as dayof
-    ,trunc(dbms_random.value(0, 1)) as ESTADO_RESERV
-    ,trunc(dbms_random.value(1, 50)) as apartment_id
-    ,t1.ID_USU
-from USUARIO t1
-FULL OUTER JOIN USUARIO t2 on t1.ID_USU = t2.ID_USU
-where TIPO_USUARIO_ID_TIPO = 1
-limit 100;
+, clientSub as (
+    select ID_USU
+        ,TO_DATE(TRUNC(DBMS_RANDOM.VALUE (2459215 , 2459580)),'J') as checkIN
+        ,trunc(dbms_random.value(1, 14)) as dayof
+        ,trunc(dbms_random.value(0, 1)) as ESTADO_RESERV
+        ,trunc(dbms_random.value(1, 50)) as apartment_id
+        ,row_number() over (order by 1) as seqnum
+from USUARIO
+where TIPO_USUARIO_ID_TIPO = 1)
+
+SELECT T1.checkIN, T1.dayof, T1.ESTADO_RESERV, T1.apartment_id, t1.id_usu, T2.ID_work
+FROM clientSub T1
+JOIN sub T2 ON T1.seqnum = T2.seqnum;
