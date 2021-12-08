@@ -70,4 +70,165 @@ from AuxDepto t1
 cross join AuxDepto t2
 cross join AuxDepto t3
 where 1=1;
+
+INSERT INTO DEPARTAMENTO_INVENTARIO(ID
+                ,CANTIDAD
+                ,DEPARTAMENTO_ID_DEPTO
+                ,INVENTARIO_ID_OBJ)
+select rowNum, trunc(dbms_random.value(1, 4))
+        , trunc(dbms_random.value(1, 215))
+        , trunc(dbms_random.value(1, 10))
+from DUAL;
+INSERT INTO DEPARTAMENTO_INVENTARIO(ID
+                ,CANTIDAD
+                ,DEPARTAMENTO_ID_DEPTO
+                ,INVENTARIO_ID_OBJ)
+select rowNum, trunc(dbms_random.value(1, 4))
+        , trunc(dbms_random.value(1, 215))
+        , trunc(dbms_random.value(1, 10))
+from DUAL;        
+INSERT INTO DEPARTAMENTO_INVENTARIO(ID
+                ,CANTIDAD
+                ,DEPARTAMENTO_ID_DEPTO
+                ,INVENTARIO_ID_OBJ)
+select rowNum, trunc(dbms_random.value(1, 4))
+        , trunc(dbms_random.value(1, 215))
+        , trunc(dbms_random.value(1, 10))
+from DUAL;
+INSERT INTO DEPARTAMENTO_INVENTARIO(ID
+                ,CANTIDAD
+                ,DEPARTAMENTO_ID_DEPTO
+                ,INVENTARIO_ID_OBJ)
+select rowNum, trunc(dbms_random.value(1, 4))
+        , trunc(dbms_random.value(1, 215))
+        , trunc(dbms_random.value(1, 10))
+from DUAL;
+INSERT INTO DEPARTAMENTO_INVENTARIO(ID
+                ,CANTIDAD
+                ,DEPARTAMENTO_ID_DEPTO
+                ,INVENTARIO_ID_OBJ)
+select rowNum, trunc(dbms_random.value(1, 4))
+        , trunc(dbms_random.value(1, 215))
+        , trunc(dbms_random.value(1, 10))
+from DUAL;
+INSERT INTO DEPARTAMENTO_INVENTARIO(ID
+                ,CANTIDAD
+                ,DEPARTAMENTO_ID_DEPTO
+                ,INVENTARIO_ID_OBJ)
+select rowNum, trunc(dbms_random.value(1, 4))
+        , trunc(dbms_random.value(1, 215))
+        , trunc(dbms_random.value(1, 10))
+from DUAL;        
+INSERT INTO DEPARTAMENTO_INVENTARIO(ID
+                ,CANTIDAD
+                ,DEPARTAMENTO_ID_DEPTO
+                ,INVENTARIO_ID_OBJ)
+select rowNum, trunc(dbms_random.value(1, 4))
+        , trunc(dbms_random.value(1, 215))
+        , trunc(dbms_random.value(1, 10))
+from DUAL;
+INSERT INTO DEPARTAMENTO_INVENTARIO(ID
+                ,CANTIDAD
+                ,DEPARTAMENTO_ID_DEPTO
+                ,INVENTARIO_ID_OBJ)
+select rowNum, trunc(dbms_random.value(1, 4))
+        , trunc(dbms_random.value(1, 215))
+        , trunc(dbms_random.value(1, 10))
+from DUAL;
+INSERT INTO DEPARTAMENTO_INVENTARIO(ID
+                ,CANTIDAD
+                ,DEPARTAMENTO_ID_DEPTO
+                ,INVENTARIO_ID_OBJ)
+select rowNum, trunc(dbms_random.value(1, 4))
+        , trunc(dbms_random.value(1, 215))
+        , trunc(dbms_random.value(1, 10))
+from DUAL;
+INSERT INTO DEPARTAMENTO_INVENTARIO(ID
+                ,CANTIDAD
+                ,DEPARTAMENTO_ID_DEPTO
+                ,INVENTARIO_ID_OBJ)
+select rowNum, trunc(dbms_random.value(1, 4))
+        , trunc(dbms_random.value(1, 215))
+        , trunc(dbms_random.value(1, 10))
+from DUAL;        
+INSERT INTO DEPARTAMENTO_INVENTARIO(ID
+                ,CANTIDAD
+                ,DEPARTAMENTO_ID_DEPTO
+                ,INVENTARIO_ID_OBJ)
+select rowNum, trunc(dbms_random.value(1, 4))
+        , trunc(dbms_random.value(1, 215))
+        , trunc(dbms_random.value(1, 10))
+from DUAL;
+INSERT INTO DEPARTAMENTO_INVENTARIO(ID
+                ,CANTIDAD
+                ,DEPARTAMENTO_ID_DEPTO
+                ,INVENTARIO_ID_OBJ)
+select rowNum, trunc(dbms_random.value(1, 4))
+        , trunc(dbms_random.value(1, 215))
+        , trunc(dbms_random.value(1, 10))
+from DUAL;
+INSERT INTO DEPARTAMENTO_INVENTARIO(ID
+                ,CANTIDAD
+                ,DEPARTAMENTO_ID_DEPTO
+                ,INVENTARIO_ID_OBJ)
+select rowNum, trunc(dbms_random.value(1, 4))
+        , trunc(dbms_random.value(1, 215))
+        , trunc(dbms_random.value(1, 10))
+from DUAL;
+INSERT INTO DEPARTAMENTO_INVENTARIO(ID
+                ,CANTIDAD
+                ,DEPARTAMENTO_ID_DEPTO
+                ,INVENTARIO_ID_OBJ)
+select rowNum, trunc(dbms_random.value(1, 4))
+        , trunc(dbms_random.value(1, 215))
+        , trunc(dbms_random.value(1, 10))
+from DUAL;        
+INSERT INTO DEPARTAMENTO_INVENTARIO(ID
+                ,CANTIDAD
+                ,DEPARTAMENTO_ID_DEPTO
+                ,INVENTARIO_ID_OBJ)
+select rowNum, trunc(dbms_random.value(1, 4))
+        , trunc(dbms_random.value(1, 215))
+        , trunc(dbms_random.value(1, 10))
+from DUAL;
+INSERT INTO DEPARTAMENTO_INVENTARIO(ID
+                ,CANTIDAD
+                ,DEPARTAMENTO_ID_DEPTO
+                ,INVENTARIO_ID_OBJ)
+select rowNum, trunc(dbms_random.value(1, 4))
+        , trunc(dbms_random.value(1, 215))
+        , trunc(dbms_random.value(1, 10))
+from DUAL;
+INSERT INTO DEPARTAMENTO_INVENTARIO(ID
+                ,CANTIDAD
+                ,DEPARTAMENTO_ID_DEPTO
+                ,INVENTARIO_ID_OBJ)
+select rowNum, trunc(dbms_random.value(1, 4))
+        , trunc(dbms_random.value(1, 215))
+        , trunc(dbms_random.value(1, 10))
+from DUAL;
+INSERT INTO DEPARTAMENTO_INVENTARIO(ID
+                ,CANTIDAD
+                ,DEPARTAMENTO_ID_DEPTO
+                ,INVENTARIO_ID_OBJ)
+select rowNum, trunc(dbms_random.value(1, 4))
+        , trunc(dbms_random.value(1, 215))
+        , trunc(dbms_random.value(1, 10))
+from DUAL;        
+INSERT INTO DEPARTAMENTO_INVENTARIO(ID
+                ,CANTIDAD
+                ,DEPARTAMENTO_ID_DEPTO
+                ,INVENTARIO_ID_OBJ)
+select rowNum, trunc(dbms_random.value(1, 4))
+        , trunc(dbms_random.value(1, 215))
+        , trunc(dbms_random.value(1, 10))
+from DUAL;
+INSERT INTO DEPARTAMENTO_INVENTARIO(ID
+                ,CANTIDAD
+                ,DEPARTAMENTO_ID_DEPTO
+                ,INVENTARIO_ID_OBJ)
+select rowNum, trunc(dbms_random.value(1, 4))
+        , trunc(dbms_random.value(1, 215))
+        , trunc(dbms_random.value(1, 10))
+from DUAL;  
 COMMIT;
