@@ -65,7 +65,7 @@ select rowNum -- 1
     , to_char(ROUND(dbms_random.value(0, 1))) -- 13
     , 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum lacinia semper nibh quis ullamcorper. Maecenas at libero sit amet justo pulvinar pellentesque eu eu leo. Sed imperdiet luctus lacus, eget. ' -- 14
     , to_char(ROUND(dbms_random.value(1, 45))) --15
-    , 'NAAA' -- 16
+    , '/usr/src/app/resources/deptoImages/depto' || to_char(ROUND(dbms_random.value(1, 6))) || '.jpg'
 from AuxDepto t1
 cross join AuxDepto t2
 cross join AuxDepto t3
