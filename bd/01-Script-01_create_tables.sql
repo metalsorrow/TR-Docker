@@ -101,7 +101,7 @@ CREATE TABLE reserva (
     id_reserva            NUMBER(10) NOT NULL,
     check_in_planificado  DATE NOT NULL,
     check_in              DATE,
-    check_out             DATE NOT NULL,
+    check_out             DATE,
     cant_dias             NUMBER(3) NOT NULL,
     cant_adultos          NUMBER(3) NOT NULL,
     cant_ninos            NUMBER(3) NOT NULL,
@@ -128,7 +128,7 @@ LOGGING;
 ALTER TABLE reserva_acta ADD CONSTRAINT reserva_acta_pk PRIMARY KEY ( id );
 
 CREATE TABLE reserva_servex (
-    id                     NUMBER(3) NOT NULL,
+    id                     NUMBER(10) NOT NULL,
     cantidad_servex        NUMBER(4) NOT NULL,
     subtotal_servex        NUMBER(14) NOT NULL,
     servicio_extra_id_serv NUMBER(10) NOT NULL,
