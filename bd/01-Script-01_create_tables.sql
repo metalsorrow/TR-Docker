@@ -30,8 +30,8 @@ ALTER TABLE comuna ADD CONSTRAINT comuna_pk PRIMARY KEY ( id_comuna );
 
 CREATE TABLE departamento (
     id_depto              NUMBER(5) NOT NULL,
-    nom_depto             VARCHAR2(50) NOT NULL,
-    direccion_depto       VARCHAR2(50) NOT NULL,
+    nom_depto             VARCHAR2(100) NOT NULL,
+    direccion_depto       VARCHAR2(100) NOT NULL,
     cant_habitaciones     NUMBER(2) NOT NULL,
     cant_estacionamientos NUMBER(2) NOT NULL,
     cant_banos            NUMBER(2) NOT NULL,
@@ -39,12 +39,11 @@ CREATE TABLE departamento (
     cable                 CHAR(1) NOT NULL,
     calefaccion           CHAR(1) NOT NULL,
     amoblado              CHAR(1) NOT NULL,
-    foto_depto            VARCHAR2(255),
     precio_depto          NUMBER(10) NOT NULL,
     estado_depto          CHAR(1) NOT NULL,
     descripcion_depto     VARCHAR2(240) NOT NULL,
     comuna_id_comuna      VARCHAR2(100) NOT NULL,
-    img_path              VARCHAR2(150) NOT NULL
+    img_path              VARCHAR2(150)
 )
 LOGGING;
 
@@ -101,7 +100,7 @@ CREATE TABLE reserva (
     id_reserva            NUMBER(10) NOT NULL,
     check_in_planificado  DATE NOT NULL,
     check_in              DATE,
-    check_out             DATE NOT NULL,
+    check_out             DATE,
     cant_dias             NUMBER(3) NOT NULL,
     cant_adultos          NUMBER(3) NOT NULL,
     cant_ninos            NUMBER(3) NOT NULL,
@@ -128,7 +127,7 @@ LOGGING;
 ALTER TABLE reserva_acta ADD CONSTRAINT reserva_acta_pk PRIMARY KEY ( id );
 
 CREATE TABLE reserva_servex (
-    id                     NUMBER(3) NOT NULL,
+    id                     NUMBER(10) NOT NULL,
     cantidad_servex        NUMBER(4) NOT NULL,
     subtotal_servex        NUMBER(14) NOT NULL,
     servicio_extra_id_serv NUMBER(10) NOT NULL,
