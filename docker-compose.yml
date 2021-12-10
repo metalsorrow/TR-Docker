@@ -39,9 +39,9 @@ services:
     #       - ./../TR-Frontend:/usr/src/app
     #     command: "npm start"
 
-    # sqlplus:
-    #     image:  guywithnose/sqlplus
-    #     command: "tail -f /dev/null"
+    sqlplus:
+        image:  guywithnose/sqlplus
+        command: "tail -f /dev/null"
 
     # test:
         # image:  backend-flask:latest
